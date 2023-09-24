@@ -1,0 +1,191 @@
+@font-face {
+  font-family: 'PKMN';
+  src: url('../assets/font/PKMN.ttf');
+}
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: 'PKMN', sans-serif;
+  --white: #eeeeee;
+  --text-shadow-color: #453F3C;
+  --pokemon-card-background: rgb(125, 133, 112, 0.6);
+  --restart-background: rgb(57, 57, 58, 0.9);
+  --restart-btn-background: #109648;
+  color: var(--white);
+  font-size: 18px;
+}
+
+body {
+  width: 100vw;
+  background-image: url(../assets/img/background.gif);
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+.home-screen {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  text-shadow: -3px 0 0px var(--text-shadow-color);
+  padding-top: 8vh;
+}
+
+.title {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+
+  animation-name: flyIn;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+}
+
+.choose {
+  font-size: 1.2rem;
+}
+
+.region-container {
+  margin-top: 20px;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 10px;
+}
+
+.region-container button {
+  color: var(--white);
+  width: fit-content;
+  background-color: transparent;
+  border: none;
+  text-shadow: -3px 0 0px var(--text-shadow-color);
+}
+
+.region-container button:hover {
+  animation-name: buttonRescale;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+@keyframes buttonRescale {
+  from {
+    transform: scale(1);
+  }
+
+
+  to {
+    transform: scale(1.2);
+  }
+}
+
+@keyframes flyIn {
+  from {
+    transform: translateY(-300px);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
+.pokemon-card-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 20px;
+}
+
+.pokemon-card {
+  padding: 15px;
+  font-size: 0.8rem;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+
+  color: var(--white);
+
+  background-color: var(--pokemon-card-background);
+  border-radius: 10px;
+}
+
+.pokemon-card img {
+  width: 100%;
+}
+
+.play-screen {
+  width: 100vw;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  gap: 40px;
+  padding: 0 20vw;
+  position: relative;
+}
+
+.play-screen .header-row {
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 50px;
+}
+
+.play-screen .return {
+  background-color: transparent;
+  border: none;
+  color: var(--white);
+  font-size: 1.1rem;
+}
+
+.score-container {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 10px;
+}
+
+.restart {
+  position: absolute;
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  margin-top: 0;
+  justify-content: center;
+  background-color: var(--restart-background);
+  gap: 10px;
+  font-size: 1.2rem;
+
+}
+
+.restart button {
+  font-size: 0.8rem;
+  width: 120px;
+  padding: 10px 0;
+  border-radius: 10px;
+}
+
+.restart .restart-btn {
+  color: var(--white);
+  background-color: var(--restart-btn-background);
+  margin-right: 20px;
+  border: 3px solid var(--white);
+}
+
+.restart .cancel-btn {
+  color: var(--restart-btn-background);
+  border: 3px solid var(--restart-btn-background)
+}
+
+.restart .btn-container {
+  margin-top: 40px;
+}
