@@ -189,3 +189,7 @@ button:hover {
 .restart .btn-container {
   margin-top: 40px;
 }
+
+.loading {
+  margin-top: 50px;
+}

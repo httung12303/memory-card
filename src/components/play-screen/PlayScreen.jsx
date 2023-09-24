@@ -82,7 +82,7 @@ export default function PlayScreen({ region, onReturn }) {
   return (
     <div className="play-screen">
       {loading ? (
-        <div>Loading</div>
+        <div className='loading'>Loading...</div>
       ) : (
         <>
           <div className="header-row">
