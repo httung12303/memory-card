@@ -1,8 +1,15 @@
-# React + Vite
+# Memory card
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## About
 
-Currently, two official plugins are available:
+This project is a part of [The Odin Project](https://www.theodinproject.com/dashboard) curriculum. The game is very simple: don't choose the card you already chosen.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+The cards contain images of Pokemon residing in the region which players choose at the start of the game.
+
+## What I learned
+
+This project, though simple, gave me experience in working with React, especially with the `useEffect` hook, and revised my knowledge of using APIs.
+
+## APIs
+
+[PokeAPI](https://pokeapi.co/)
